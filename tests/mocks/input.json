@@ -36,11 +36,20 @@
             "match": {}
           },
           {
-            "name": "this should be skipped",
+            "name": "this should be undefined",
             "line": 37,
             "keyword": "And ",
             "result": {
               "status": "undefined"
+            },
+            "match": {}
+          },
+          {
+            "name": "this should be skipped",
+            "line": 37,
+            "keyword": "And ",
+            "result": {
+              "status": "skipped"
             },
             "match": {}
           },
