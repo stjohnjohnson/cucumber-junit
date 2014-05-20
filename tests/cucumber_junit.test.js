@@ -1,0 +1,22 @@
+/*jslint nomen: true */
+var Y = require('yuitest'),
+    Assert = Y.Assert,
+    fs = require('fs'),
+    path = require('path'),
+    cucumber_junit;
+
+Y.TestRunner.add(new Y.TestCase({
+
+    name : 'cucumber junit test',
+
+    setUp: function () {
+        cucumber_junit = require('../lib/cucumber_junit');
+    },
+
+    'conversion was successful': function () {
+        var inputJson = fs.readFileSync(path.join(__dirname, '/mocks/input.json')),
+            outputXml = fs.readFileSync(path.join(__dirname, '/mocks/output.xml'));
+
+        Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ' }), 'XML is the same');
+    }
+}));

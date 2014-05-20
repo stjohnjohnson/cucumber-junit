@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+var cucumber_junit = require('../lib/cucumber_junit'),
+    rawInput = '';
+
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('readable', function() {
+    var chunk = process.stdin.read();
+    if (chunk !== null) {
+        rawInput += chunk.toString();
+    }
+});
+
+process.stdin.on('end', function() {
+    process.stdout.write(cucumber_junit(rawInput));
+});
