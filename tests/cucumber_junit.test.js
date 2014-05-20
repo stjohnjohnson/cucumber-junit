@@ -21,6 +21,6 @@ Y.TestRunner.add(new Y.TestCase({
     },
 
     'conversion supports empty data': function () {
-        Assert.areEqual('', cucumber_junit('', { indent: '    ' }), 'No input JSON == No output XML');
+        Assert.areEqual('', cucumber_junit(' ', { indent: '    ' }), 'No input JSON == No output XML');
     }
 }));
