@@ -1,4 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.8"
+- '0.10'
+- '0.8'
+deploy:
+  provider: npm
+  email: st.john.johnson@gmail.com
+  api_key:
+    secure: NYPwHzR0rbs7jGj57ThsCMKQEu/lx/+lZqNWLmY4stA1bN+4z2ijmrvDg4amB2XyCGW3EgJRhA3GPA2f3QIzkywBEEEeJPeWqI6Nko+dm1uVg/gSFGh9s/rOSFKis1pU8ZgS8k11sRDHcEmyXI2wcOEsTp2RXdcfiVjTyhOJyTQ=
+  on:
+    tags: true
+    repo: stjohnjohnson/cucumber-junit
