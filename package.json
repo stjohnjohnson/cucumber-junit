@@ -1,6 +1,6 @@
 {
   "name": "cucumber-junit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Cucumber wrapper that converts the JSON output to JUnitXML",
   "bin": {
     "cucumber-junit": "bin/cucumber-junit"
@@ -18,7 +18,7 @@
     "junit"
   ],
   "engines": {
-    "node" : "~0.10.20"
+    "node": "~0.10.20"
   },
   "author": "St. John Johnson <st.john.johnson@gmail.com>",
   "license": "MIT",
