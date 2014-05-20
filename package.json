@@ -1,0 +1,24 @@
+{
+  "name": "cucumber-junit",
+  "version": "1.0.0",
+  "description": "Cucumber wrapper that converts the JSON output to JUnitXML",
+  "bin": {
+    "cucumber-junit": "bin/cucumber-junit"
+  },
+  "scripts": {
+    "test": "ytestrunner --coverage"
+  },
+  "keywords": [
+    "cucumber",
+    "junit"
+  ],
+  "author": "St. John Johnson <st.john.johnson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "xml": "0.0.12"
+  },
+  "devDependencies": {
+    "ytestrunner": "~0.3.3",
+    "yuitest": "~0.7.9"
+  }
+}

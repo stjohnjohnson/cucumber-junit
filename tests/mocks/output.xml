@@ -1,0 +1,15 @@
+<testsuite name="featureid;test-cucumber-junit" tests="5" failures="1">
+    <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit">
+    </testcase>
+    <testcase name="When I start the conversion" classname="featureid;test-cucumber-junit">
+    </testcase>
+    <testcase name="Then the conversion should be successful" classname="featureid;test-cucumber-junit">
+    </testcase>
+    <testcase name="And this should be skipped" classname="featureid;test-cucumber-junit">
+        <skipped message="">
+        </skipped>
+    </testcase>
+    <testcase name="And this should fail" classname="featureid;test-cucumber-junit">
+        <error message="AssertionError">AssertionError</error>
+    </testcase>
+</testsuite>
