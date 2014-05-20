@@ -18,5 +18,9 @@ Y.TestRunner.add(new Y.TestCase({
             outputXml = fs.readFileSync(path.join(__dirname, '/mocks/output.xml'));
 
         Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ' }), 'XML is the same');
+    },
+
+    'conversion supports empty data': function () {
+        Assert.areEqual('', cucumber_junit('', { indent: '    ' }), 'No input JSON == No output XML');
     }
 }));
