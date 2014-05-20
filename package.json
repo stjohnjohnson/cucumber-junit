@@ -8,10 +8,18 @@
   "scripts": {
     "test": "ytestrunner --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stjohnjohnson/cucumber-junit.git"
+  },
+  "bugs": "https://github.com/stjohnjohnson/cucumber-junit/issues",
   "keywords": [
     "cucumber",
     "junit"
   ],
+  "engines": {
+    "node" : "~0.10.20"
+  },
   "author": "St. John Johnson <st.john.johnson@gmail.com>",
   "license": "MIT",
   "dependencies": {
