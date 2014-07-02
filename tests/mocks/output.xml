@@ -1,19 +1,21 @@
-<testsuite name="featureid;test-cucumber-junit" tests="6" failures="1" skipped="2">
-    <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
-    </testcase>
-    <testcase name="When I start the conversion" classname="featureid;test-cucumber-junit" time="0.547465333">
-    </testcase>
-    <testcase name="Then the conversion should be successful" classname="featureid;test-cucumber-junit" time="0.000100672">
-    </testcase>
-    <testcase name="And this should be undefined" classname="featureid;test-cucumber-junit">
-        <skipped message="">
-        </skipped>
-    </testcase>
-    <testcase name="And this should be skipped" classname="featureid;test-cucumber-junit">
-        <skipped message="">
-        </skipped>
-    </testcase>
-    <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
-        <error message="AssertionError">AssertionError</error>
-    </testcase>
-</testsuite>
+<testsuites>
+    <testsuite name="featureid;test-cucumber-junit" tests="6" failures="1" skipped="2">
+        <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
+        </testcase>
+        <testcase name="When I start the conversion" classname="featureid;test-cucumber-junit" time="0.547465333">
+        </testcase>
+        <testcase name="Then the conversion should be successful" classname="featureid;test-cucumber-junit" time="0.000100672">
+        </testcase>
+        <testcase name="And this should be undefined" classname="featureid;test-cucumber-junit">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="And this should be skipped" classname="featureid;test-cucumber-junit">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
+            <error message="AssertionError">AssertionError</error>
+        </testcase>
+    </testsuite>
+</testsuites>
