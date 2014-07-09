@@ -1,0 +1,10 @@
+[
+  {
+    "id": "featureid",
+    "elements": [
+      {
+        "id": "featureid;test-cucumber-junit"
+      }
+    ]
+  }
+]
