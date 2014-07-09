@@ -20,6 +20,13 @@ Y.TestRunner.add(new Y.TestCase({
         Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ' }), 'XML is the same');
     },
 
+    'conversion support emprty steps': function () {
+        var emptyJson = fs.readFileSync(path.join(__dirname, '/mocks/empty_steps.json')),
+            outputXml = fs.readFileSync(path.join(__dirname, '/mocks/empty_output.xml'));
+
+        Assert.areEqual(outputXml, cucumber_junit(emptyJson, { indent: '    ' }), 'XML is the same');
+    },
+
     'conversion supports empty data': function () {
         Assert.areEqual('<testsuites>\n</testsuites>', cucumber_junit(' ', { indent: '    ' }), 'No input JSON == Empty XML');
     },
