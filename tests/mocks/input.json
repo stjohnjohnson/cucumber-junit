@@ -3,6 +3,20 @@
     "id": "featureid",
     "elements": [
       {
+        "name": "",
+        "keyword": "Background",
+        "description": "",
+        "type": "background",
+        "line": 3,
+        "steps": [
+          {
+            "name": "a \"cucumber\" project",
+            "line": 34,
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
         "id": "featureid;test-cucumber-junit",
         "steps": [
           {
