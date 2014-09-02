@@ -1,85 +1,88 @@
 [
-  {
-    "id": "featureid",
-    "elements": [
-      {
-        "name": "",
-        "keyword": "Background",
-        "description": "",
-        "type": "background",
-        "line": 3,
-        "steps": [
-          {
-            "name": "a \"cucumber\" project",
-            "line": 34,
-            "keyword": "Given "
-          }
+    {
+        "id": "featureid",
+        "elements": [
+            {
+                "name": "",
+                "keyword": "Background",
+                "description": "",
+                "type": "background",
+                "line": 3,
+                "steps": [
+                    {
+                        "name": "a \"cucumber\" project",
+                        "line": 34,
+                        "keyword": "Given "
+                    }
+                ]
+            },
+            {
+                "id": "featureid;test-cucumber-junit",
+                "steps": [
+                    {
+                        "name": "a \"cucumber\" project",
+                        "line": 34,
+                        "keyword": "Given ",
+                        "result": {
+                            "duration": 5678078312,
+                            "status": "passed"
+                        },
+                        "match": {}
+                    },
+                    {
+                        "name": "I start the conversion",
+                        "line": 35,
+                        "keyword": "When ",
+                        "result": {
+                            "duration": 547465333,
+                            "status": "passed"
+                        },
+                        "match": {}
+                    },
+                    {
+                        "name": "the conversion should be successful",
+                        "line": 36,
+                        "keyword": "Then ",
+                        "result": {
+                            "duration": 100672,
+                            "status": "passed"
+                        },
+                        "match": {}
+                    },
+                    {
+                        "name": "this should be undefined",
+                        "line": 37,
+                        "keyword": "And ",
+                        "result": {
+                            "status": "undefined"
+                        },
+                        "match": {}
+                    },
+                    {
+                        "name": "this should be skipped",
+                        "line": 37,
+                        "keyword": "And ",
+                        "result": {
+                            "status": "skipped"
+                        },
+                        "match": {}
+                    },
+                    {
+                        "name": "this should fail",
+                        "line": 38,
+                        "keyword": "And ",
+                        "result": {
+                            "error_message": "AssertionError",
+                            "duration": 133006989,
+                            "status": "failed"
+                        },
+                        "match": {}
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "id": "featureid;test-cucumber-junit",
-        "steps": [
-          {
-            "name": "a \"cucumber\" project",
-            "line": 34,
-            "keyword": "Given ",
-            "result": {
-              "duration": 5678078312,
-              "status": "passed"
-            },
-            "match": {}
-          },
-          {
-            "name": "I start the conversion",
-            "line": 35,
-            "keyword": "When ",
-            "result": {
-              "duration": 547465333,
-              "status": "passed"
-            },
-            "match": {}
-          },
-          {
-            "name": "the conversion should be successful",
-            "line": 36,
-            "keyword": "Then ",
-            "result": {
-              "duration": 100672,
-              "status": "passed"
-            },
-            "match": {}
-          },
-          {
-            "name": "this should be undefined",
-            "line": 37,
-            "keyword": "And ",
-            "result": {
-              "status": "undefined"
-            },
-            "match": {}
-          },
-          {
-            "name": "this should be skipped",
-            "line": 37,
-            "keyword": "And ",
-            "result": {
-              "status": "skipped"
-            },
-            "match": {}
-          },
-          {
-            "name": "this should fail",
-            "line": 38,
-            "keyword": "And ",
-            "result": {
-              "error_message": "AssertionError",
-              "duration": 133006989,
-              "status": "failed"
-            },
-            "match": {}
-          }
-        ]
-      }
-    ]
-  }
+    },
+    {
+        "id": "feature-empty-elements"
+    }
 ]
