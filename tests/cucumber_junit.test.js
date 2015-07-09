@@ -28,10 +28,10 @@ Y.TestRunner.add(new Y.TestCase({
     },
 
     'conversion supports empty data': function () {
-        Assert.areEqual('<testsuites>\n</testsuites>', cucumber_junit(' ', { indent: '    ' }), 'No input JSON == Empty XML');
+        Assert.areEqual('<?xml version="1.0" encoding="UTF-8"?>\n<testsuites>\n</testsuites>', cucumber_junit(' ', { indent: '    ' }), 'No input JSON == Empty XML');
     },
 
     'conversion supports empty array': function () {
-        Assert.areEqual("<testsuites>\n    <testsuite>\n    </testsuite>\n</testsuites>", cucumber_junit('[]', { indent: '    ' }), 'Empty Array Json == Empty Testcase XML');
+        Assert.areEqual('<?xml version="1.0" encoding="UTF-8"?>\n<testsuites>\n    <testsuite>\n    </testsuite>\n</testsuites>', cucumber_junit('[]', { indent: '    ' }), 'Empty Array Json == Empty Testcase XML');
     }
 }));
