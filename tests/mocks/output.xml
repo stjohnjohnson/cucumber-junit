@@ -15,7 +15,7 @@
             </skipped>
         </testcase>
         <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
-            <error message="AssertionError">AssertionError</error>
+            <failure message="AssertionError">AssertionError</failure>
         </testcase>
     </testsuite>
 </testsuites>
