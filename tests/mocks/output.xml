@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
     <testsuite name="featureid;test-cucumber-junit" tests="6" failures="1" skipped="2">
         <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
@@ -15,7 +16,7 @@
             </skipped>
         </testcase>
         <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
-            <error message="AssertionError">AssertionError</error>
+            <failure message="AssertionError">AssertionError</failure>
         </testcase>
     </testsuite>
 </testsuites>
