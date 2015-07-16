@@ -19,6 +19,12 @@
             },
             {
                 "id": "featureid;test-cucumber-junit",
+                "tags": [
+                    {
+                        "name": "@a",
+                        "line": 1
+                    }
+                ],
                 "steps": [
                     {
                         "name": "a \"cucumber\" project",

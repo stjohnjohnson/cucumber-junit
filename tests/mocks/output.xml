@@ -2,6 +2,8 @@
 <testsuites>
     <testsuite name="featureid;test-cucumber-junit" tests="6" failures="1" skipped="2">
         <properties>
+            <property name="@a" value="true">
+            </property>
             <property name="URI" value="path\to\test.feature">
             </property>
         </properties>
