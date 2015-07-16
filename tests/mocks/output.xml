@@ -18,5 +18,9 @@
         <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
             <failure message="AssertionError">AssertionError</failure>
         </testcase>
+        <properties>
+            <property name="URI" value="path\to\test.feature">
+            </property>
+        </properties>
     </testsuite>
 </testsuites>

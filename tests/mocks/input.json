@@ -1,6 +1,7 @@
 [
     {
         "id": "featureid",
+        "uri": "path\\to\\test.feature",
         "elements": [
             {
                 "name": "",
