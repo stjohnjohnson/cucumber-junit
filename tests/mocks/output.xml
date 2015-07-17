@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
     <testsuite name="featureid;test-cucumber-junit" tests="6" failures="1" skipped="2">
+        <properties>
+            <property name="@a" value="true">
+            </property>
+            <property name="URI" value="path\to\test.feature">
+            </property>
+        </properties>
         <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
         </testcase>
         <testcase name="When I start the conversion" classname="featureid;test-cucumber-junit" time="0.547465333">
