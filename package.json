@@ -17,9 +17,6 @@
     "cucumber",
     "junit"
   ],
-  "engines": {
-    "node": "~0.10.20"
-  },
   "author": "St. John Johnson <st.john.johnson@gmail.com>",
   "license": "MIT",
   "main": "./lib/cucumber_junit.js",
