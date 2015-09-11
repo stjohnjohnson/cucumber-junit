@@ -33,7 +33,7 @@ $ npm install --dev
 cucumber-junit should be appended to your existing Cucumber.JS commands
 
 ``` shell
-$ node_modules/.bin/cucumber-js --format=json | cucumber-junit > output_JUnit.xml
+$ node_modules/.bin/cucumber-js --format=json | node_modules/.bin/cucumber-junit > output_JUnit.xml
 ```
 
 ## License
