@@ -1,6 +1,6 @@
 # cucumber-junit
 
-[![Build Status](https://travis-ci.org/NinjaTux/cucumber-junit.svg)](https://travis-ci.org/NinjaTux/cucumber-junit)
+[![wercker status](https://app.wercker.com/status/a4b60396ae8a91bf223f44cdac8e09df/m "wercker status")](https://app.wercker.com/project/bykey/a4b60396ae8a91bf223f44cdac8e09df)
 
 Converts CucumberJS JSON output into JUnitXML for software like Jenkins to read.
 
