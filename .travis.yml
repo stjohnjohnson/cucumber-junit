@@ -10,4 +10,3 @@ deploy:
   on:
     tags: true
     repo: stjohnjohnson/cucumber-junit
-
