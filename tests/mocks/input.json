@@ -84,6 +84,17 @@
                             "status": "failed"
                         },
                         "match": {}
+                    },
+                    {
+                        "name": "this should remain hidden",
+                        "line": 39,
+                        "hidden": true,
+                        "keyword": "And ",
+                        "result": {
+                            "duration": 100672,
+                            "status": "passed"
+                        },
+                        "match": {}
                     }
                 ]
             }
