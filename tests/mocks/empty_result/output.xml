@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="ootb.-login;check-forgot-password" tests="8" failures="0" skipped="0">
+        <properties>
+            <property name="@should_test" value="true">
+            </property>
+            <property name="@now" value="true">
+            </property>
+            <property name="URI" value="features/_OOTB_login.feature">
+            </property>
+        </properties>
+        <testcase name="Given the app is running" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I press &quot;Log in&quot; button" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I should see &quot;Sign in&quot; label" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I press a &quot;Forgot Your Password?&quot; label" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I should see &quot;ENTER YOUR EMAIL&quot; label" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I enter &quot;&lt;input&gt;&quot; email" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I press a &quot;Send&quot; button" classname="ootb.-login;check-forgot-password">
+        </testcase>
+        <testcase name="* I should see &quot;&lt;output&gt;&quot; notification" classname="ootb.-login;check-forgot-password">
+        </testcase>
+    </testsuite>
+</testsuites>
