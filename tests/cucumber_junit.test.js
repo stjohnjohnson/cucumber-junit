@@ -5,6 +5,10 @@ var Y = require('yuitest'),
     path = require('path'),
     cucumber_junit;
 
+function loadMockData(file) {
+    return fs.readFileSync(path.join(__dirname, '/mocks/' + file)).toString().trim();
+}
+
 Y.TestRunner.add(new Y.TestCase({
 
     name : 'cucumber junit test',
@@ -14,15 +18,15 @@ Y.TestRunner.add(new Y.TestCase({
     },
 
     'conversion was successful': function () {
-        var inputJson = fs.readFileSync(path.join(__dirname, '/mocks/input.json')),
-            outputXml = fs.readFileSync(path.join(__dirname, '/mocks/output.xml'));
+        var inputJson = loadMockData('input.json'),
+            outputXml = loadMockData('output.xml');
 
         Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ' }), 'XML is the same');
     },
 
-    'conversion support emprty steps': function () {
-        var emptyJson = fs.readFileSync(path.join(__dirname, '/mocks/empty_steps.json')),
-            outputXml = fs.readFileSync(path.join(__dirname, '/mocks/empty_output.xml'));
+    'conversion support empty steps': function () {
+        var emptyJson = loadMockData('empty_steps/input.json'),
+            outputXml = loadMockData('empty_steps/output.xml');
 
         Assert.areEqual(outputXml, cucumber_junit(emptyJson, { indent: '    ' }), 'XML is the same');
     },
@@ -33,5 +37,12 @@ Y.TestRunner.add(new Y.TestCase({
 
     'conversion supports empty array': function () {
         Assert.areEqual('<?xml version="1.0" encoding="UTF-8"?>\n<testsuites>\n    <testsuite>\n    </testsuite>\n</testsuites>', cucumber_junit('[]', { indent: '    ' }), 'Empty Array Json == Empty Testcase XML');
+    },
+
+    'conversion support empty results': function () {
+        var emptyJson = loadMockData('empty_result/input.json'),
+            outputXml = loadMockData('empty_result/output.xml');
+
+        Assert.areEqual(outputXml, cucumber_junit(emptyJson, { indent: '    ' }), 'XML is the same');
     }
 }));

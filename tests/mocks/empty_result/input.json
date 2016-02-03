@@ -1,0 +1,191 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "OOTB. Login",
+    "line": 1,
+    "description": "Successfully logged in with valid and refused with invalid credential",
+    "id": "ootb.-login",
+    "uri": "features/_OOTB_login.feature",
+    "elements": [
+      {
+        "keyword": "Scenario Outline",
+        "name": "Check Forgot Password",
+        "line": 33,
+        "description": "",
+        "tags": [
+          {
+            "name": "@should_test",
+            "line": 32
+          },
+          {
+            "name": "@now",
+            "line": 32
+          }
+        ],
+        "id": "ootb.-login;check-forgot-password",
+        "type": "scenario_outline",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the app is running",
+            "line": 35,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 0,
+                  "val": "the"
+                }
+              ],
+              "location": "calabash-cucumber-0.16.4/features/step_definitions/calabash_steps.rb:4"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I press \"Log in\" button",
+            "line": 36,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "Log in"
+                }
+              ],
+              "location": "features/step_definitions/wine_page_variations_steps.rb:92"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I should see \"Sign in\" label",
+            "line": 37,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 14,
+                  "val": "Sign in"
+                }
+              ],
+              "location": "features/step_definitions/general_steps.rb:3"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I press a \"Forgot Your Password?\" label",
+            "line": 38,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 11,
+                  "val": "Forgot Your Password?"
+                }
+              ],
+              "location": "features/step_definitions/general_steps.rb:8"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I should see \"ENTER YOUR EMAIL\" label",
+            "line": 39,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 14,
+                  "val": "ENTER YOUR EMAIL"
+                }
+              ],
+              "location": "features/step_definitions/general_steps.rb:3"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I enter \"<input>\" email",
+            "line": 40,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 9,
+                  "val": "existing@vivino.com"
+                }
+              ],
+              "location": "features/step_definitions/ootb_steps.rb:24"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I press a \"Send\" button",
+            "line": 41,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 11,
+                  "val": "Send"
+                },
+                {
+                  "offset": 17,
+                  "val": "button"
+                }
+              ],
+              "location": "features/step_definitions/general_steps.rb:24"
+            }
+          },
+          {
+            "keyword": "* ",
+            "name": "I should see \"<output>\" notification",
+            "line": 42,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 14,
+                  "val": "Your password has been sent to your email address."
+                }
+              ],
+              "location": "features/step_definitions/general_steps.rb:19"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "keyword": "Examples",
+            "name": "",
+            "line": 45,
+            "description": "",
+            "id": "ootb.-login;check-forgot-password;",
+            "rows": [
+              {
+                "cells": [
+                  "input",
+                  "output"
+                ],
+                "line": 46,
+                "id": "ootb.-login;check-forgot-password;;1"
+              },
+              {
+                "cells": [
+                  "existing@vivino.com",
+                  "Your password has been sent to your email address."
+                ],
+                "line": 47,
+                "id": "ootb.-login;check-forgot-password;;2"
+              },
+              {
+                "cells": [
+                  "unexisting@vivino.com",
+                  "User doesn't exist"
+                ],
+                "line": 48,
+                "id": "ootb.-login;check-forgot-password;;3"
+              },
+              {
+                "cells": [
+                  "randomString",
+                  "Invalid Email"
+                ],
+                "line": 49,
+                "id": "ootb.-login;check-forgot-password;;4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
