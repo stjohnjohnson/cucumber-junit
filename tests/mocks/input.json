@@ -25,6 +25,9 @@
                         "line": 1
                     }
                 ],
+                "properties": {
+                    "testProperty": "testValue"
+                },
                 "steps": [
                     {
                         "name": "a \"cucumber\" project",
