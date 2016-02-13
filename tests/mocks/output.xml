@@ -4,9 +4,9 @@
         <properties>
             <property name="@a" value="true">
             </property>
-            <property name="URI" value="path\to\test.feature">
-            </property>
             <property name="testProperty" value="testValue">
+            </property>
+            <property name="URI" value="path\to\test.feature">
             </property>
         </properties>
         <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
