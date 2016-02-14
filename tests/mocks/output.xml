@@ -4,6 +4,8 @@
         <properties>
             <property name="@a" value="true">
             </property>
+            <property name="testProperty" value="testValue">
+            </property>
             <property name="URI" value="path\to\test.feature">
             </property>
         </properties>
