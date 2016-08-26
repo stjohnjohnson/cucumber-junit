@@ -2,7 +2,22 @@
 var cucumber_junit = require('../lib/cucumber_junit'),
     rawInput = '';
 
-process.stdin.setEncoding('utf8');
+var argv = require('yargs')
+    .usage('Usage: $0 --strict --indent 4 --encoding UTF-8')
+    .alias('s', 'strict')
+    .boolean('s')
+    .describe('s', 'Report pending or undefined steps as failures')
+    .alias('i', 'indent')
+    .default('i', 4)
+    .describe('i', 'The number of spaces to indent the JSON')
+    .alias('e', 'encoding')
+    .default('e', 'UTF-8')
+    .describe('e', 'passed to the XML formatter')
+    .help('h')
+    .alias('h', 'help')
+    .argv;
+
+process.stdin.setEncoding(argv.encoding);
 
 process.stdin.on('readable', function() {
     var chunk = process.stdin.read();
@@ -12,5 +27,11 @@ process.stdin.on('readable', function() {
 });
 
 process.stdin.on('end', function() {
-    process.stdout.write(cucumber_junit(rawInput));
+    var options = {
+        indent: Array(argv.indent + 1).join(' '),
+        strict: argv.strict,
+        declaration: { encoding: argv.encoding }
+    };
+
+    process.stdout.write(cucumber_junit(rawInput, options));
 });

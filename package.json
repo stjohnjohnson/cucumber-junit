@@ -21,7 +21,8 @@
   "license": "MIT",
   "main": "./lib/cucumber_junit.js",
   "dependencies": {
-    "xml": "0.0.12"
+    "xml": "0.0.12",
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "ytestrunner": "~0.3.3",
