@@ -56,11 +56,11 @@ cucumber-junit can be called from [Gulp](http://gulpjs.com/):
 ```javascript
 gulp.task('cucumber:report', ['cucumber'], function() {
     gulp.src('test-reports/cucumber.json')
-        .pipe(gulpCucumberXmlReport({strict: true}))
+        .pipe(cucumberXmlReport({strict: true}))
         .pipe(gulp.dest('test-reports'));
 });
 
-function gulpCucumberXmlReport(opts) {
+function cucumberXmlReport(opts) {
     var gutil = require('gulp-util'),
         through = require('through2'),
         cucumberJunit = require('cucumber-junit');
