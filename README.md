@@ -36,6 +36,45 @@ cucumber-junit should be appended to your existing Cucumber.JS commands
 $ node_modules/.bin/cucumber-js --format=json | node_modules/.bin/cucumber-junit > output_JUnit.xml
 ```
 
+The following options are supported by `lib/cucumber_junit`:
+
+* strict - if true, pending or undefined steps will be reported as failures
+* indent - passed to the [XML formatter][XML], defaults to 4 spaces
+* stream - passed to the [XML formatter][XML] to return the result as a stream
+* declaration - passed to the [XML formatter][XML]
+
+These options can be specified on the command line when calling `.bin/cucumber-junit`:
+
+* `-s` or `--strict`
+* `-i 4` or `--indent 4` 
+* `-e UTF-8` or `--encoding "UTF-*"` - applied to the XML declaration 
+
+## Gulp
+
+cucumber-junit can be called from [Gulp](http://gulpjs.com/):
+
+```javascript
+gulp.task('cucumber:report', ['cucumber'], function() {
+    gulp.src('test-reports/cucumber.json')
+        .pipe(cucumberXmlReport({strict: true}))
+        .pipe(gulp.dest('test-reports'));
+});
+
+function cucumberXmlReport(opts) {
+    var gutil = require('gulp-util'),
+        through = require('through2'),
+        cucumberJunit = require('cucumber-junit');
+
+    return through.obj(function (file, enc, cb) {
+        var xml = cucumberJunit(file.contents, opts);
+        file.contents = new Buffer(xml);
+        file.path = gutil.replaceExtension(file.path, '.xml');
+        cb(null, file);
+    });
+}
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © [St. John Johnson](http://stjohnjohnson.com)
+[XML]: https://www.npmjs.com/package/xml#options

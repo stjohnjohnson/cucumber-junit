@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="featureid;test-cucumber-junit" tests="6" failures="2" skipped="1">
+        <properties>
+            <property name="@a" value="true">
+            </property>
+            <property name="testProperty" value="testValue">
+            </property>
+            <property name="URI" value="path\to\test.feature">
+            </property>
+        </properties>
+        <testcase name="Given a &quot;cucumber&quot; project" classname="featureid;test-cucumber-junit" time="5.678078312">
+        </testcase>
+        <testcase name="When I start the conversion" classname="featureid;test-cucumber-junit" time="0.547465333">
+        </testcase>
+        <testcase name="Then the conversion should be successful" classname="featureid;test-cucumber-junit" time="0.000100672">
+        </testcase>
+        <testcase name="And this should be undefined" classname="featureid;test-cucumber-junit">
+            <failure message="Undefined step. Implement with the following snippet:">Undefined step. Implement with the following snippet:
+  this.And(/^this should be undefined$/, function(callback) {
+      // Write code here that turns the phrase above into concrete actions
+      callback(null, &apos;pending&apos;);
+  });</failure>
+        </testcase>
+        <testcase name="And this should be skipped" classname="featureid;test-cucumber-junit">
+            <skipped message="">
+            </skipped>
+        </testcase>
+        <testcase name="And this should fail" classname="featureid;test-cucumber-junit" time="0.133006989">
+            <failure message="AssertionError">AssertionError</failure>
+        </testcase>
+    </testsuite>
+</testsuites>

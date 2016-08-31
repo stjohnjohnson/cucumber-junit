@@ -24,6 +24,13 @@ Y.TestRunner.add(new Y.TestCase({
         Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ' }), 'XML is the same');
     },
 
+    'conversion in strict mode': function () {
+        var inputJson = loadMockData('input.json'),
+            outputXml = loadMockData('output-strict.xml');
+
+        Assert.areEqual(outputXml, cucumber_junit(inputJson, { indent: '    ', strict: true }), 'XML is the same');
+    },
+
     'conversion support empty steps': function () {
         var emptyJson = loadMockData('empty_steps/input.json'),
             outputXml = loadMockData('empty_steps/output.xml');
