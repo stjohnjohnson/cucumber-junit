@@ -42,6 +42,7 @@ The following options are supported by `lib/cucumber_junit`:
 * indent - passed to the [XML formatter][XML], defaults to 4 spaces
 * stream - passed to the [XML formatter][XML] to return the result as a stream
 * declaration - passed to the [XML formatter][XML]
+* prefix - added to each test suite name (if test are executed against multiple browsers/devices)
 
 These options can be specified on the command line when calling `.bin/cucumber-junit`:
 
@@ -64,8 +65,14 @@ function cucumberXmlReport(opts) {
     var gutil = require('gulp-util'),
         through = require('through2'),
         cucumberJunit = require('cucumber-junit');
-
+    
     return through.obj(function (file, enc, cb) {
+        // If tests are executed against multiple browsers/devices
+        var suffix = file.path.match(/\/cucumber-?(.*)\.json/);
+        if (suffix) {
+            opts.prefix = suffix[1] + ';';
+        }
+        
         var xml = cucumberJunit(file.contents, opts);
         file.contents = new Buffer(xml);
         file.path = gutil.replaceExtension(file.path, '.xml');
