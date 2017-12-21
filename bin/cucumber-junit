@@ -13,6 +13,8 @@ var argv = require('yargs')
     .alias('e', 'encoding')
     .default('e', 'UTF-8')
     .describe('e', 'passed to the XML formatter')
+    .alias('p', 'prefix')
+    .describe('p', 'added to each test suite name')
     .help('h')
     .alias('h', 'help')
     .argv;
@@ -30,7 +32,8 @@ process.stdin.on('end', function() {
     var options = {
         indent: Array(argv.indent + 1).join(' '),
         strict: argv.strict,
-        declaration: { encoding: argv.encoding }
+        declaration: { encoding: argv.encoding },
+        prefix : argv.prefix
     };
 
     process.stdout.write(cucumber_junit(rawInput, options));
